@@ -9,7 +9,7 @@
       "
     >
       <a-col flex="auto">
-        <div class="menu" justify="start">
+        <div class="menuLeft">
           <a-menu
             v-model="selectedKey"
             mode="horizontal"
@@ -39,21 +39,33 @@
           </a-menu>
         </div>
       </a-col>
-      <a-col flex="auto">
-        <div>auto</div>
-      </a-col>
       <a-col flex="auto" style="display: flex; align-items: center">
-        <a-space>
-          <a-button type="primary" @click="login">登录</a-button>
-          <a-button @click="register">注册</a-button>
-        </a-space>
+        <div class="menuRight">
+          <a-space>
+            <a-button type="primary" @click="login">登录</a-button>
+            <a-button @click="register">注册</a-button>
+          </a-space>
+        </div>
       </a-col>
     </a-row>
 
     <!-- <router-view/> -->
   </div>
 </template>
-
+<style scoped>
+.menuLeft {
+  text-align: left;
+}
+.menuRight {
+  margin-left: auto;
+  padding: 14px 30px;
+}
+@media screen and (max-width: 768px) {
+  .menuRight {
+    display: none;
+  }
+}
+</style>
 <script>
 import router from "@/router";
 export default {

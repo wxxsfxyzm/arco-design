@@ -15,20 +15,19 @@
 <style scoped>
 #mainContent {
   margin-top: 0px;
-  min-height: 280px;
+
   margin-right: calc(100% - 100vw);
 }
 #alcontent {
   margin-top: 0px;
-  min-height: 100vh;
+  margin-right: calc(100% - 100vw);
 }
 .layout :deep(.arco-layout-content) {
   background-color: var(--color-bg-2);
   display: flex;
   align-items: flex-start;
-  vertical-align: top;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   color: var(--color-text-1);
   font-size: 22px;
   /* font-stretch: condensed; */
@@ -69,6 +68,6 @@ export default {
   font-size: 26px;
   color: #2c3e50;
   margin-top: 0px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 </style>
