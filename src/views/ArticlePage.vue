@@ -1,7 +1,7 @@
 <template>
   <div
     :style="{
-      background: 'var(--color-fill-2)',
+      //background: 'var(--color-fill-2)',
       width: '70%',
       margin: '0 auto',
     }"
@@ -10,13 +10,7 @@
       :style="{ background: 'var(--color-bg-2)' }"
       title="ArcoDesign"
     >
-      <template #breadcrumb>
-        <a-breadcrumb>
-          <a-breadcrumb-item>Home</a-breadcrumb-item>
-          <a-breadcrumb-item>Channel</a-breadcrumb-item>
-          <a-breadcrumb-item>News</a-breadcrumb-item>
-        </a-breadcrumb>
-      </template>
+      <bread-crumb />
       <template #subtitle>
         <a-space>
           <span>ArcoDesign Vue 2.0</span>
@@ -29,8 +23,10 @@
           <a-button type="primary">Save</a-button>
         </a-space>
       </template>
-      <p>For other uses, see Design</p>
-      <p>
+    </a-page-header>
+    <a-typography :style="{ marginTop: '-40px' }">
+      <a-typography-title>For other uses, see Design</a-typography-title>
+      <a-typography-paragraph>
         A design is a plan or specification for the construction of an object or
         system or for the implementation of an activity or process, or the
         result of that plan or specification in the form of a prototype, product
@@ -46,24 +42,17 @@
         patterns.Major examples of designs include architectural
         blueprints,engineering drawings, business processes, circuit diagrams,
         and sewing patterns.
-      </p>
-    </a-page-header>
+      </a-typography-paragraph>
+    </a-typography>
   </div>
 </template>
-<style scoped>
-p {
-  color: black;
-}
-</style>
 
 <script>
+import BreadCrumb from "@/components/BreadCrumb.vue";
 export default {
   name: "ArticlePage",
+  components: {
+    BreadCrumb,
+  },
 };
 </script>
-
-<style scoped>
-.article-page {
-  /* Add your styles here */
-}
-</style>
